@@ -52,17 +52,16 @@ export const NeighborCookBook = () => {
                     const copy = { ...recipe }
                     copy.courseId = event.target.value
                     updateFilteredRecipe(copy)
-                }} 
-          </select>
-    </form>
-    filteredRecipe.map(
+                }}
+
+                filteredRecipe.map(
         (recipe) => {
             return <section className="recipe" key={`recipe--${recipe.id}`}>
                 <input type="radio" value={recipe.id} />
             </section>
         }
-    )
-            
+            )
+
         </article >
     </>
 }

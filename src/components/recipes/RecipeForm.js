@@ -14,7 +14,22 @@ export const RecipeForm = () => {
         approved: false
     })
 
-    //bring about use navigation to redict user to recipe list 
+    //create state variables for recipes/courses
+    const [recipeCourses, setRecipeCourses] = useState([])
+
+    //useeffect to observe state of recipeCourses by fetching courses from api
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/courses`)
+                .then(respone => response.json())
+                .then((coursesArray) => {
+                    setRecipeCourses(coursesArray)
+                })
+        },
+        []
+    )
+
+    //bring about use navigation to redirect user to recipe list 
     const navigate = useNavigate()
 
     const localCookUser = localStorage.getItem("cook_user")
@@ -32,7 +47,7 @@ export const RecipeForm = () => {
             courseId: parseInt(recipe.courseId),
             description: recipe.description,
             approved: recipe.approved
-        }
+        })
 
 
         //perform the fetch() to [OST the object to the API 
@@ -45,7 +60,86 @@ export const RecipeForm = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate()
-            })
+                navigate("/recipes")
+            }
+            ),
+            []
+
     }
+
+    return <>
+        <form className="recipe" ></form>
+        <h2 className="recipeForm__Title"> New Recipe</h2>
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="label">What Course Is Your Recipe?</label>
+                {
+                    productTypes.map(
+                        (type) => {
+                            return <section className="typeOfProduct" key={`type--${type.id}`}>
+
+                                <input
+                                    onChange={
+                                        (evt) => {
+                                            const copy = { ...product }
+                                            copy.typeId = type.id
+                                            update(copy)
+
+                                        }
+
+                                    }
+                                    type="checkbox" value={`${type.id}`} /> {type.type}
+
+                            </section>
+                        }
+
+                    )}
+            </div>
+        </fieldset>
+        <fieldset>
+            <div className="form-group" key={`recipe--${recipe.id}`}>
+                <label htmlFor="Name"></label>
+                <input
+                    required autoFocus
+                    type="text"
+                    className="form-control"
+                    placeholder="What is the name of your product"
+                    value={product.name}
+                    onChange={
+                        (evt) => {
+                            //copy existing state
+                            const copy = { ...product }
+                            copy.name = evt.target.value
+                            update(copy)
+                        }
+                    } />
+            </div>
+        </fieldset>
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="label" >Price of Candy</label>
+                <input
+                    required autoFocus
+                    type="text"
+                    className="form-control"
+                    placeholder="How much is it going to be?"
+                    value={product.price}
+                    onChange={
+                        (evt) => {
+                            //copy existing state
+                            const copy = { ...product }
+                            copy.price = evt.target.value
+                            update(copy)
+
+                        }
+                    } />
+            </div>
+        </fieldset>
+
+        <button
+            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+            className="btn btn-primary">
+            Submit Product
+        </button>
+    </>
 }
