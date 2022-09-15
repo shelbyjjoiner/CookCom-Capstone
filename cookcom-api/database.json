@@ -1,0 +1,154 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Darnall Vernay",
+            "email": "dvernay0@nih.gov",
+            "address": "707 Quincy Trail",
+            "isAdmin": false
+        },
+        {
+            "id": 2,
+            "name": "Haskel Lawrenceson",
+            "email": "hlawrenceson1@sohu.com",
+            "address": "5038 Prairieview Point",
+            "isAdmin": true
+        },
+        {
+            "id": 3,
+            "name": "Ahmed Accombe",
+            "email": "aaccombe2@paginegialle.it",
+            "address": "7383 Debra Junction",
+            "isAdmin": false
+        },
+        {
+            "id": 4,
+            "name": "Monika Kilmaster",
+            "email": "mkilmaster3@about.me",
+            "address": "54 Dunning Junction",
+            "isAdmin": true
+        },
+        {
+            "id": 5,
+            "name": "Giacinta Yankeev",
+            "email": "gyankeev4@ft.com",
+            "address": "1 Tennessee Trail",
+            "isAdmin": true
+        },
+        {
+            "id": 6,
+            "name": "Lil Cranston",
+            "email": "lcranston5@toplist.cz",
+            "address": "15 Manufacturers Drive",
+            "isAdmin": false
+        },
+        {
+            "id": 7,
+            "name": "Fanchon Cholerton",
+            "email": "fcholerton6@printfriendly.com",
+            "address": "54 Eagan Street",
+            "isAdmin": false
+        },
+        {
+            "id": 8,
+            "name": "Ervin Cram",
+            "email": "ecram7@disqus.com",
+            "address": "4 Morrow Pass",
+            "isAdmin": true
+        },
+        {
+            "email": "ellethomthumper@hotmail.gov",
+            "name": "Ellouise Thompson",
+            "isAdmin": false,
+            "address": "567 Roscommon Way",
+            "id": 9
+        }
+    ],
+    "neighbors": [
+        {
+            "id": 1,
+            "userId": 1,
+            "favoriteRecipeId": 1,
+            "isChefOfTheWeek": false
+        },
+        {
+            "id": 2,
+            "userId": 3,
+            "favoriteRecipeId": 2,
+            "isChefOfTheWeek": false
+        },
+        {
+            "id": 3,
+            "userId": 6,
+            "favoriteRecipeId": 3,
+            "isChefOfTheWeek": true
+        },
+        {
+            "id": 4,
+            "userId": 7,
+            "favoriteRecipeId": 4,
+            "isChefOfTheWeek": false
+        }
+    ],
+    "admins": [
+        {
+            "id": 1,
+            "userId": 2
+        },
+        {
+            "id": 2,
+            "userId": 4
+        },
+        {
+            "id": 3,
+            "userId": 5
+        },
+        {
+            "id": 4,
+            "userId": 8
+        }
+    ],
+    "recipes": [
+        {
+            "id": 1,
+            "courseId": 3,
+            "name": "Banana Pudding Cups",
+            "description": "this is just a tester",
+            "chefId": "1",
+            "approved": true
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "mealType": "Appetizers"
+        },
+        {
+            "id": 2,
+            "mealType": "Entrees"
+        },
+        {
+            "id": 3,
+            "mealType": "Desserts"
+        },
+        {
+            "id": 4,
+            "mealType": "Soups"
+        },
+        {
+            "id": 5,
+            "mealType": "Salads"
+        },
+        {
+            "id": 6,
+            "mealType": "Cocktails"
+        }
+    ],
+    "favoriteRecipe": [
+        {
+            "id": 1,
+            "chefId": 1,
+            "recipeId": 1
+        }
+    ]
+}
