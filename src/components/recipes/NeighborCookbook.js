@@ -1,11 +1,14 @@
 //the responsibility of this module is to view all courses of recipes
 
 import { useEffect, useState } from "react"
+import "./recipes.css"
 
 export const NeighborCookBook = () => {
-    const [recipe, setRecipes] = useState([])
+    const [recipes, setRecipes] = useState([])
     const [filteredRecipe, updateFilteredRecipe] = useState([])
+    const [courses, setCourses] = useState([])
     const [selectedCourse, setSelectedCourse] = useState([])
+    const [approved, setApproved] = useState([])
     const localCookUser = localStorage.getItem("cook_user")
     const cookUserObject = JSON.parse(localCookUser)
 
@@ -13,7 +16,7 @@ export const NeighborCookBook = () => {
     //set up to fetch recipe data from api 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/recipes?_expand=course`)
+            fetch(`http://localhost:8088/recipes?_expand=course&approved=true`)
                 .then(response => response.json())
                 .then((recipeArray) => {
                     setRecipes(recipeArray)
@@ -22,46 +25,70 @@ export const NeighborCookBook = () => {
 
             fetch(`http://localhost:8088/courses`)
                 .then(response => response.json())
-                .then((recipeArray) => {
-                    setSelectedCourse(recipeArray)
+                .then((courseArray) => {
+                    setCourses(courseArray)
                 })
         },
         []
+    )
+
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/recipes?_expand=course&courseId=${selectedCourse}&approved=true`)
+                .then(response => response.json())
+                .then((smallRecipeArray) => {
+                    updateFilteredRecipe(smallRecipeArray)
+                })
+        },
+        [selectedCourse]
     )
 
 
 
 
 
-
     //jsx jsx jsx jsx jsx
-    return
-    <>
+    return (
+        <>
 
-        //drop down for select courseId
+            <h2> What Recipe Are You Looking For? </h2>
 
-        //onchange sets courseid
-        //useeffect [selectedCourse] has courseId, runs filtered recipe with matching courseId
+            <article className="recipes">
+                {courses.map(
+                    (course) => {
+                        return (
+                            <>
+                                <button value={course.id}
+                                    onClick={() => {
+                                        setSelectedCourse(course.id)
+                                    }}
+                                >
+                                    {course.mealType}
 
-        <h2> What Recipe Are You Looking For? </h2>
+                                </button>
 
-        <article className="recipes">
+                            </>
+                        )
+                    }
+                )}
 
-            <select id="courselist" value={recipe.courseId}
-                onChange={(event) => {
-                    const copy = { ...recipe }
-                    copy.courseId = event.target.value
-                    updateFilteredRecipe(copy)
-                }}
+                {filteredRecipe.map(
+                    (recipe) => {
+                        return <form className="recipe">
+                            <header>{recipe.name}</header>
+                            {recipe.summary}
+                        </form>
 
-                filteredRecipe.map(
-        (recipe) => {
-            return <section className="recipe" key={`recipe--${recipe.id}`}>
-                <input type="radio" value={recipe.id} />
-            </section>
-        }
-            )
 
-        </article >
-    </>
+                    }
+                )}
+
+
+
+
+
+
+            </article >
+        </>
+    )
 }

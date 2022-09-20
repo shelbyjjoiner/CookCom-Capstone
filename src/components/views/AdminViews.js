@@ -3,6 +3,8 @@
 //do necessary imports
 import { Outlet, Route, Routes } from "react-router-dom"
 import { AboutPage } from "../about/aboutPage"
+import { RecipeViews } from "../admins/RecipeViews"
+import { NeighborsList } from "../chefs/NeighborsList"
 import { NeighborCookBook } from "../recipes/NeighborCookbook"
 
 export const AdminViews = () => {
@@ -17,7 +19,9 @@ export const AdminViews = () => {
                 </>
             }>
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/neighbors" element={<NeighborsList />} />
                 <Route path="/cookbook" element={<NeighborCookBook />} />
+                <Route path="/view" element={<RecipeViews />} />
 
             </Route>
         </Routes>

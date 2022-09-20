@@ -62,32 +62,50 @@
             "isAdmin": false,
             "address": "567 Roscommon Way",
             "id": 9
+        },
+        {
+            "email": "franbuildscakes@gmail.com",
+            "name": "Francine Biller",
+            "isAdmin": false,
+            "address": "568 Gordon Lane",
+            "id": 10
         }
     ],
     "neighbors": [
         {
             "id": 1,
             "userId": 1,
+            "address": "707 Quincy Trail",
             "favoriteRecipeId": 1,
             "isChefOfTheWeek": false
         },
         {
             "id": 2,
             "userId": 3,
+            "address": "7383 Debra Junction",
             "favoriteRecipeId": 2,
             "isChefOfTheWeek": false
         },
         {
             "id": 3,
             "userId": 6,
+            "address": "15 Manufacturers Drive",
             "favoriteRecipeId": 3,
             "isChefOfTheWeek": true
         },
         {
             "id": 4,
             "userId": 7,
+            "address": "54 Eagan Street",
             "favoriteRecipeId": 4,
             "isChefOfTheWeek": false
+        },
+        {
+            "address": "568 Gordon Lane",
+            "favoriteRecipeId": 5,
+            "isChefOfTheWeek": false,
+            "userId": 10,
+            "id": 5
         }
     ],
     "admins": [
@@ -110,12 +128,116 @@
     ],
     "recipes": [
         {
-            "id": 1,
+            "name": "Mozzarella Sticks",
+            "courseId": 1,
+            "summary": "Good ole homemade mozzy sticks",
+            "ingredients": "1⁄4 cup flour 1 cup Italian style breadcrumbs 2 eggs 1 tablespoon milk 1 lb mozzarella cheese, cut into 3/4 inch x 3/4 inch strips (or you can use string cheese and cut each in half) 1 cup vegetable oil 1 cup jarred pizza sauce or 1 cup marinara sauce",
+            "instructions": "    Instructions: Whisk eggs and milk together. Coat each piece of cheese with flour, then dip in egg and then roll in bread crumbs. Dip in egg and crumbs again. Freeze for 6 to 24 hours before frying. Heat oil in skillet and cook sticks for about a minute on each side, or until golden and before cheese starts to leak. Drain on paper towels. Serve with sauce for dipping.",
+            "userId": 1,
+            "approved": true,
+            "id": 2,
+            "course": {
+                "id": 1,
+                "mealType": "Appetizers"
+            }
+        },
+        {
+            "name": "Cream of Mushroom ",
+            "courseId": 4,
+            "summary": " lets get stuffed w shroomies! ",
+            "ingredients": "mushroom, cream, etc.",
+            "instructions": "put in pot, boil, serve ",
+            "userId": 1,
+            "approved": true,
+            "id": 3,
+            "course": {
+                "id": 4,
+                "mealType": "Soups"
+            }
+        },
+        {
+            "name": "Caesar Salad",
+            "courseId": 5,
+            "summary": "lets kill em again",
+            "ingredients": "lettuce, chicken, shallots, etc ",
+            "instructions": "chop up and put in bowl ",
+            "userId": 1,
+            "approved": true,
+            "id": 4,
+            "course": {
+                "id": 5,
+                "mealType": "Salads"
+            }
+        },
+        {
+            "name": "Neighborhood Negroni",
+            "courseId": 6,
+            "summary": "traditional Italian cocktail strong enough to make you talk to your hated neighbor",
+            "ingredients": "1 ounce Junipero gin, 1 ounce Campari, 1 ounce Martini, and Rossi sweet vermouth, Garnish: orange wheel",
+            "instructions": "Add the gin, Campari and sweet vermouth to a mixing glass, fill with ice, and stir until well-chilled.  Strain into a chilled rocks glass or cocktail glass.  Garnish with an orange wheel.",
+            "userId": 1,
+            "approved": true,
+            "id": 5,
+            "course": {
+                "id": 6,
+                "mealType": "Cocktails"
+            }
+        },
+        {
+            "name": "Homemade Chicken Alfredo",
+            "courseId": 2,
+            "summary": "if you buy alfredo sauce from the store, i hate you ",
+            "ingredients": "For the Noodles 16 ounces dry fettuccine pasta For the Chicken 1 pound boneless, skinless chicken breasts 1 teaspoon Italian seasoning 3/4 teaspoon kosher salt 1/4 teaspoon pepper 2 tablespoons extra-virgin olive oil 1 tablespoon butter For the Sauce 1/2 cup butter , cut into large cubes or slices 2 cups heavy whipping cream 1 clove garlic , minced 3/4 teaspoon garlic powder 3/4 teaspoon Italian Seasoning 1/4 teaspoon salt 1/4 teaspoon pepper 2 cups freshly grated Parmesan cheese",
+            "instructions": "Make the noodles: Bring a large pot of salted water to a boil. Add the fettuccine and cook until al dente according to package directions, usually 10 minutes. Reserve 1/2 cup of the cooking water, then drain well. Set aside. Make the chicken: Season chicken breasts with the Italian seasoning, salt, and pepper. Warm the olive oil over medium-high heat in a large nonstick skillet. Once it’s shimmering, swirl the pan to evenly distribute. Add the chicken and leave it undisturbed for 5-7 minutes, until the bottom is golden-brown. Flip over and add in 1 tablespoon of butter between them, picking up the pan to give it a gentle swirl to distribute. Continue cooking for another 5-7 minutes (or an internal temperature reaches 165 degrees F.) Transfer the chicken to a cutting board and let rest for 3 minutes. Cut into 1/2-inch-thick slices. Tent with foil while you prepare the sauce. Make the Alfredo sauce: In the same pan, over medium-low heat, add the butter and cream; whisk until butter has melted. Add in the minced garlic, garlic powder, Italian seasoning, salt, and pepper; whisk until combined and smooth. Bring to a gentle simmer (do not boil) and cook for 3-4 minutes, whisking constantly, until it starts to thicken. Stir in the parmesan cheese just until melted and the sauce is smooth. (If the sauce ends up too thick, add some of the reserved pasta cooking water, a few tablespoons at a time, to thin it out.) Assemble: Take sauce off the heat and immediately toss with the cooked fettuccine noodles. Divide the pasta among serving bowls and top with a few slices of chicken. Garnish with parsley, more Parmesan, and black pepper if desired.",
+            "userId": 1,
+            "approved": true,
+            "id": 6,
+            "course": {
+                "id": 2,
+                "mealType": "Entrees"
+            }
+        },
+        {
+            "name": " Crème Brûlée",
             "courseId": 3,
-            "name": "Banana Pudding Cups",
-            "description": "this is just a tester",
-            "chefId": "1",
-            "approved": true
+            "summary": "it is literally hot cheesecake disguised as a custard",
+            "ingredients": "2 cups heavy or light cream, or half-and-half 1 vanilla bean, split lengthwise, or 1 teaspoon vanilla extract ⅛ teaspoon salt 5 egg yolks ½ cup sugar, more for topping",
+            "instructions": "Step 1 Heat oven to 325 degrees. In a saucepan, combine cream, vanilla bean and salt and cook over low heat just until hot. Let sit for a few minutes, then discard vanilla bean. (If using vanilla extract, add it now.)  Step 2 In a bowl, beat yolks and sugar together until light. Stir about a quarter of the cream into this mixture, then pour sugar-egg mixture into cream and stir. Pour into four 6-ounce ramekins and place ramekins in a baking dish; fill dish with boiling water halfway up the sides of the dishes. Bake for 30 to 40 minutes, or until centers are barely set. Cool completely. Refrigerate for several hours and up to a couple of days.  Step 3 When ready to serve, top each custard with about a teaspoon of sugar in a thin layer. Place ramekins in a broiler 2 to 3 inches from heat source. Turn on broiler. Cook until sugar melts and browns or even blackens a bit, about 5 minutes. Serve within two hours.",
+            "userId": 1,
+            "approved": true,
+            "id": 8,
+            "course": {
+                "id": 3,
+                "mealType": "Desserts"
+            }
+        },
+        {
+            "name": "Old Fashion",
+            "courseId": 6,
+            "summary": "old fashioned like the way your parents were raised",
+            "ingredients": "1 teaspoon sugar 3 dashes Angostura bitters 1 teaspoon water 2 ounces bourbon (or rye whiskey, if preferred) Garnish: orange twist",
+            "instructions": "Add the sugar and bitters to a rocks glass, then add the water, and stir until the sugar is nearly dissolved.  Fill the glass with large ice cubes, add the bourbon, and gently stir to combine.  Express the oil of an orange twist over the glass, then drop into the glass to garnish.",
+            "userId": 6,
+            "approved": true,
+            "id": 9,
+            "course": {
+                "id": 6,
+                "mealType": "Cocktails"
+            }
+        },
+        {
+            "name": "Chicken Noodle",
+            "courseId": 4,
+            "summary": "grandma's elixir to cure a cold day outside ",
+            "ingredients": "2 tablespoons unsalted butter 1 onion, diced 2 carrots, peeled and diced 2 celery ribs, diced 3 cloves garlic, minced 8 cups chicken stock 2 bay leaves Kosher salt freshly ground black pepper, to taste 2 1/2 pounds bone-in, skinless chicken breasts 2 1/2 cups wide egg noodles 2 tablespoons chopped fresh parsley leaves 2 tablespoons chopped fresh dill 1 tablespoon freshly squeezed lemon juice",
+            "instructions": "Melt butter in a large stockpot or Dutch oven over medium heat. Add onion, carrots and celery. Cook, stirring occasionally, until tender, about 3-4 minutes. Stir in garlic until fragrant, about 1 minute. Stir in chicken stock and bay leaves; season with salt and pepper, to taste. Add chicken and bring to boil; reduce heat and simmer, covered, until the chicken is cooked through, about 30-40 minutes. Remove chicken and let cool before dicing into bite-size pieces, discarding bones. Stir in chicken and pasta and cook until tender, about 6-7 minutes. Remove from heat; stir in parsley, dill and lemon juice; season with salt and pepper, to taste. Serve immediately.",
+            "userId": 6,
+            "approved": true,
+            "id": 10,
+            "course": {
+                "id": 4,
+                "mealType": "Soups"
+            }
         }
     ],
     "courses": [

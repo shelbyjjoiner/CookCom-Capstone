@@ -1,0 +1,12 @@
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.recipe {
+    background-color: darksalmon;
+    border: 1px dotted blueviolet;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}

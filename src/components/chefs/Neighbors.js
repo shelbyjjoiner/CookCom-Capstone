@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export const Neighbors = ({ id, name, recipeId }) => {
     return <section className="neighbor">
         <div>
-            <Link to={`/neighbors/${id}`}>{name} </Link>
+            <Link to={`/neighborprofile/${id}`}>{name} </Link>
         </div>
 
     </section>

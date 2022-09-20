@@ -15,6 +15,9 @@ export const AdminNav = () => {
             <ol className="navbar__item active">
                 <Link className="navbar__link" to="/cookbook">Neighbor Cookbook</Link>
             </ol>
+            <ol className="navbar__item active">
+                <Link className="navbar__link" to="/view">Recipe Submissions</Link>
+            </ol>
             {
                 //building link for logout button
                 localStorage.getItem("cook_user")

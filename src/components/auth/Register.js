@@ -25,9 +25,23 @@ export const Register = (props) => {
                         id: createdUser.id,
                         staff: createdUser.isAdmin
                     }))
+                    const neighbor = {
+                        address: chef.address,
+                        favoriteRecipeId: chef.recipeId,
+                        isChefOfTheWeek: false,
+                        userId: createdUser.id
 
-                    navigate("/")
+                    }
+
+                    fetch(`http://localhost:8088/neighbors`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(neighbor)
+                    })
                 }
+                navigate("/")
             })
     }
 
@@ -52,6 +66,9 @@ export const Register = (props) => {
         copy[evt.target.id] = evt.target.value
         setChef(copy)
     }
+
+
+
 
     return (
         <main style={{ textAlign: "center" }}>

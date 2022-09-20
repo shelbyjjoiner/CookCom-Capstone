@@ -1,26 +1,33 @@
-//the responsibility of this module is to display a new recipe form
-//and have the user be able to submit said new recipe to admin 
-import { useEffect } from "react"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+//responsibility is to navigate the user to a form to edit their approved recipe
 
-export const RecipeForm = () => {
+import { useEffect, useState } from "react"
 
-    //default properties to state object 
+
+
+export const EditRecipe = () => {
     const [recipe, update] = useState({
         courseId: "",
         name: "",
         summary: "",
         ingredients: "",
-        instructions: "",
-        userId: 0,
-        approved: false
+        instructions: ""
     })
 
-    //create state variables for recipes/courses
-    const [recipeCourses, setRecipeCourses] = useState([])
+    const localCookUser = localStorage.getItem("cook_user")
+    const cookUserObject = JSON.parse(localCookUser)
 
-    //useeffect to observe state of recipeCourses by fetching courses from api
+    const [recipeCourses, setRecipeCourses] = useState([])
+    //get recipe from api and update state 
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/recipes?_expand=userId&userId=${cookUserObject.id}`)
+                .then(response => response.json())
+                .then((recipeArray) => {
+                    update(recipeArray)
+                })
+        }
+    )
+    //get courses from api
     useEffect(
         () => {
             fetch(`http://localhost:8088/courses`)
@@ -32,48 +39,26 @@ export const RecipeForm = () => {
         []
     )
 
-
-
-
-    //bring about use navigation to redirect user to recipe list 
-    const navigate = useNavigate()
-
-    const localCookUser = localStorage.getItem("cook_user")
-    const cookUserObject = JSON.parse(localCookUser)
-
-    //onchange button
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
 
-        //create the object to be saved to the api 
-        const recipeToSendToAPI = {
-            name: recipe.name,
-            courseId: parseInt(recipe.courseId),
-            summary: recipe.summary,
-            ingredients: recipe.ingredients,
-            instructions: recipe.instructions,
-            userId: parseInt(recipe.userId),
-            approved: recipe.approved
-        }
-
-
-        //perform the fetch() to [OST the object to the API 
-        return fetch(`http://localhost:8088/recipes?_expand=course`, {
-            method: "POST",
+        return fetch(`http://localhost:8088/recipes/${recipe.id}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(recipeToSendToAPI)
+            body: JSON.stringify(recipe)
         })
+
             .then(response => response.json())
             .then(() => {
-                navigate("/views")
-            }
-            ),
-            []
-
+                update()
+            })
     }
+
+
+
 
     return <>
         <form className="recipe" ></form>
@@ -188,4 +173,5 @@ export const RecipeForm = () => {
             Submit Recipe
         </button>
     </>
+
 }

@@ -12,8 +12,8 @@ export const NeighborsList = () => {
         () => {
             fetch(`http://localhost:8088/users?isAdmin=false`)
                 .then(response => response.json())
-                .then((chefArray) => {
-                    setNeighbors(chefArray)
+                .then((neighborArray) => {
+                    setNeighbors(neighborArray)
                 })
         },
         []
@@ -25,6 +25,7 @@ export const NeighborsList = () => {
                 neighbors.map(neighbor => <Neighbors key={`neighbor--${neighbor.id}`}
                     id={neighbor.id}
                     name={neighbor.name} />)
+
             }
         </article>
     </>
