@@ -2,6 +2,7 @@
 //w details such as name, address, and what they have created
 
 import { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { EditRecipe } from "./editRecipes";
 
 export const Profile = () => {
@@ -17,7 +18,7 @@ export const Profile = () => {
     const localCookUser = localStorage.getItem("cook_user")
     const cookUserObject = JSON.parse(localCookUser)
 
-
+    const navigate = useNavigate()
 
 
 
@@ -76,7 +77,7 @@ export const Profile = () => {
                                     <header>{recipe.name}</header>
                                     {recipe.summary}
                                     <button onClick={() => {
-                                        <EditRecipe />
+                                        navigate(`/profile/edit_recipe/${recipe.id}`)
                                     }}
                                     >Edit</button>
                                     <button onClick={(clickEvent) => {

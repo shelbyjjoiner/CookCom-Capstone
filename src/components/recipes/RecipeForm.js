@@ -53,7 +53,7 @@ export const RecipeForm = () => {
             summary: recipe.summary,
             ingredients: recipe.ingredients,
             instructions: recipe.instructions,
-            userId: parseInt(recipe.userId),
+            userId: parseInt(cookUserObject.id),
             approved: recipe.approved
         }
 
@@ -96,7 +96,11 @@ export const RecipeForm = () => {
                                         }
 
                                     }
-                                    type="checkbox" value={`${course.id}`} /> {course.mealType}
+                                    type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
+
+
+
+
 
                             </section>
                         }

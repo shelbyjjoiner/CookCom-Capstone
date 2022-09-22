@@ -7,6 +7,7 @@ import { NeighborsList } from "../chefs/NeighborsList"
 import { EditRecipe } from "../profiles/editRecipes"
 import { NeighborProfile } from "../profiles/NeighborProfile"
 import { Profile } from "../profiles/ProfilePage"
+import { FullRecipe } from "../recipes/fullRecipe"
 import { NeighborCookBook } from "../recipes/NeighborCookbook"
 import { RecipeForm } from "../recipes/RecipeForm"
 
@@ -15,7 +16,7 @@ export const ChefViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Welcome to Cookcom!</h1>
+                    <h1>Welcome to CookCom!</h1>
                     <div>Your friendly neighborhood cooking community!</div>
 
                     <Outlet />
@@ -24,7 +25,8 @@ export const ChefViews = () => {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/neighbors" element={<NeighborsList />} />
                 <Route path="/cookbook" element={<NeighborCookBook />} />
-                <Route path="profile/edit_recipe" element={<EditRecipe />} />
+                <Route path="/cookbook/fullrecipe/:recipeId" element={<FullRecipe />} />
+                <Route path="profile/edit_recipe/:recipeId" element={<EditRecipe />} />
                 <Route path="/neighborprofile/:userId" element={<NeighborProfile />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/create" element={<RecipeForm />} />

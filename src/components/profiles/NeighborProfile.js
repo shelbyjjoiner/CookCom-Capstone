@@ -15,10 +15,10 @@ export const NeighborProfile = () => {
     //create fetch to get neighbors 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/neighbors/${userId}`) //$userid
+            fetch(`http://localhost:8088/neighbors?_expand=user&userId=${userId}`) //$userid
                 .then(response => response.json())
                 .then((userIdArray) => {
-                    updateNeighbor(userIdArray)
+                    updateNeighbor(userIdArray[0])
                 })
         },
         [userId]
@@ -32,8 +32,10 @@ export const NeighborProfile = () => {
                 .then((recipeArray) => {
                     updateRecipe(recipeArray)
                 })
-        }
+        },
+        []
     )
+
     return <>
         <form className="neighbor_profile" >
             <header>Welcome to {neighbor?.user?.name}'s Page! </header>

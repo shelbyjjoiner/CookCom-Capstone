@@ -27,7 +27,6 @@ export const Register = (props) => {
                     }))
                     const neighbor = {
                         address: chef.address,
-                        favoriteRecipeId: chef.recipeId,
                         isChefOfTheWeek: false,
                         userId: createdUser.id
 

@@ -6,8 +6,11 @@ textarea {
 }
 
 body {
-  padding: 0 3rem;
+  background: url(https://i.pinimg.com/736x/bb/30/5f/bb305f19e4e7b6a9ead05dc4dbd1c7e1.jpg) no-repeat center center fixed;
+  background-size: cover;
+
 }
+
 
 h1,
 h2,

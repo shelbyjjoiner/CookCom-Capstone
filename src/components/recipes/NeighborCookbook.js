@@ -1,7 +1,9 @@
 //the responsibility of this module is to view all courses of recipes
 
+import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import "./recipes.css"
+import { Link } from "react-router-dom"
 
 export const NeighborCookBook = () => {
     const [recipes, setRecipes] = useState([])
@@ -12,6 +14,7 @@ export const NeighborCookBook = () => {
     const localCookUser = localStorage.getItem("cook_user")
     const cookUserObject = JSON.parse(localCookUser)
 
+    const navigate = useNavigate()
 
     //set up to fetch recipe data from api 
     useEffect(
@@ -58,7 +61,7 @@ export const NeighborCookBook = () => {
                     (course) => {
                         return (
                             <>
-                                <button value={course.id}
+                                <button class="button-74" role="button" value={course.id}
                                     onClick={() => {
                                         setSelectedCourse(course.id)
                                     }}
@@ -77,6 +80,10 @@ export const NeighborCookBook = () => {
                         return <form className="recipe">
                             <header>{recipe.name}</header>
                             {recipe.summary}
+                            <Link to={`/cookbook/fullrecipe/${recipe.id}`}><button
+
+                            >Full Recipe</button></Link>
+
                         </form>
 
 

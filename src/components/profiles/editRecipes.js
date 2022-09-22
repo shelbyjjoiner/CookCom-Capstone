@@ -1,7 +1,7 @@
 //responsibility is to navigate the user to a form to edit their approved recipe
 
 import { useEffect, useState } from "react"
-
+import { useNavigate, useParams } from "react-router-dom"
 
 
 export const EditRecipe = () => {
@@ -16,16 +16,20 @@ export const EditRecipe = () => {
     const localCookUser = localStorage.getItem("cook_user")
     const cookUserObject = JSON.parse(localCookUser)
 
+    const { recipeId } = useParams()
+
+    const navigate = useNavigate()
     const [recipeCourses, setRecipeCourses] = useState([])
     //get recipe from api and update state 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/recipes?_expand=userId&userId=${cookUserObject.id}`)
+            fetch(`http://localhost:8088/recipes?_expand=user&id=${recipeId}`)
                 .then(response => response.json())
                 .then((recipeArray) => {
-                    update(recipeArray)
+                    update(recipeArray[0])
                 })
-        }
+        },
+        []
     )
     //get courses from api
     useEffect(
@@ -53,7 +57,7 @@ export const EditRecipe = () => {
 
             .then(response => response.json())
             .then(() => {
-                update()
+                navigate("/profile")
             })
     }
 
@@ -62,28 +66,50 @@ export const EditRecipe = () => {
 
     return <>
         <form className="recipe" ></form>
-        <h2 className="recipeForm__Title"> New Recipe</h2>
+        <h2 className="recipeForm__Title"> Edit Recipe</h2>
         <fieldset>
             <div className="form-group">
                 <label htmlFor="label">What Course Is Your Recipe?</label>
                 {
                     recipeCourses.map(
                         (course) => {
-                            return <section className="typeOfCourse" key={`course--${course.id}`}>
+                            if (recipe.courseId === course.id) {
 
-                                <input
-                                    onChange={
-                                        (evt) => {
-                                            const copy = { ...recipe }
-                                            copy.courseId = course.id
-                                            update(copy)
+
+                                return <section className="typeOfCourse" key={`course--${course.id}`}>
+
+                                    <input
+                                        onChange={
+                                            (evt) => {
+                                                const copy = { ...recipe }
+                                                copy.courseId = course.id
+                                                update(copy)
+
+                                            }
 
                                         }
+                                        type="radio" checked name="courses" value={`${course.id}`} /> {course.mealType}
 
-                                    }
-                                    type="checkbox" value={`${course.id}`} /> {course.mealType}
 
-                            </section>
+                                </section>
+                            }
+                            else {
+                                return <section className="typeOfCourse" key={`course--${course.id}`}>
+
+                                    <input
+                                        onChange={
+                                            (evt) => {
+                                                const copy = { ...recipe }
+                                                copy.courseId = course.id
+                                                update(copy)
+
+                                            }
+
+                                        }
+                                        type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
+
+                                </section>
+                            }
                         }
 
                     )}
@@ -170,7 +196,7 @@ export const EditRecipe = () => {
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">
-            Submit Recipe
+            Submit Revision
         </button>
     </>
 

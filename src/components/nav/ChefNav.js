@@ -10,22 +10,22 @@ export const ChefNav = () => {
                 <Link className="navbar__link" to="/about">About Us</Link>
             </ol>
             <ol className="navbar__item active">
-                <Link className="navbar__link" to="/neighbors">Your Neighbors</Link>
+                <Link className="navbar__Link" to="/neighbors">Your Neighbors</Link>
             </ol>
             <ol className="navbar__item active">
-                <Link className="navbar__link" to="/cookbook">Neighbor Cookbook</Link>
+                <Link className="navbar__Link" to="/cookbook">Neighbor Cookbook</Link>
             </ol>
             <ol className="navbar__item active">
-                <Link className="navbar__link" to="/profile">Profile</Link>
+                <Link className="navbar__Link" to="/profile">Profile</Link>
             </ol>
             <ol className="navbar__item active">
-                <Link className="navbar__link" to="/create">New Recipe</Link>
+                <Link className="navbar__Link" to="/create">New Recipe</Link>
             </ol>
             {
-                //building link for logout button
+                //building link for logout Link
                 localStorage.getItem("cook_user")
                     ? <li className="navbar__item navbar__logout">
-                        <Link className="navbar__link" to="" onClick={() => {
+                        <Link className="navbar__Link" to="" onClick={() => {
                             localStorage.removeItem("cook_user")
                             navigate("/", { replace: true })
                         }}>Logout</Link>
