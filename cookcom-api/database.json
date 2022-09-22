@@ -57,13 +57,6 @@
       "isAdmin": true
     },
     {
-      "email": "franbuildscakes@gmail.com",
-      "name": "Francine Biller",
-      "isAdmin": false,
-      "address": "568 Gordon Lane",
-      "id": 10
-    },
-    {
       "email": "thotspot@hotmail.com",
       "name": "Tanner Hilltop",
       "isAdmin": false,
@@ -99,13 +92,6 @@
       "address": "54 Eagan Street",
       "favoriteRecipeId": 4,
       "isChefOfTheWeek": false
-    },
-    {
-      "address": "568 Gordon Lane",
-      "favoriteRecipeId": 5,
-      "isChefOfTheWeek": false,
-      "userId": 10,
-      "id": 5
     },
     {
       "address": "6870 Treasure Blvd",
@@ -275,27 +261,6 @@
       }
     },
     {
-      "name": "Momma Summer's Strawberry Milkshake",
-      "courseId": 3,
-      "summary": "this will definitely bring the boys to your yard like it did w my ex boyfriend ",
-      "ingredients": "1/2 pound fresh strawberries, hulled and sliced, plus whole strawberries, for garnish  2 heaping tablespoons sugar  1 teaspoon vanilla extract  1 pint vanilla ice cream  1/2 cup milk",
-      "instructions": "In a mixing bowl combine the sliced strawberries, sugar and vanilla extract and stir to combine well. Set aside and allow to macerate for at least 20 minutes and up to 1 hour. In a large mixer, place the strawberries, ice cream, and milk. Blend until smooth. Pour into ice cream parlor glasses and garnish the rim of each glass with whole strawberries. Serve immediately.",
-      "userId": 9,
-      "approved": true,
-      "id": 12,
-      "course": {
-        "id": 3,
-        "mealType": "Desserts"
-      },
-      "user": {
-        "email": "ellethomthumper@hotmail.gov",
-        "name": "Ellouise Thompson",
-        "isAdmin": false,
-        "address": "567 Roscommon Way",
-        "id": 9
-      }
-    },
-    {
       "name": "Banana Pudding Cups",
       "courseId": 3,
       "summary": "nanners in the summertime ",
@@ -314,20 +279,6 @@
         "isAdmin": false,
         "address": "6870 Treasure Blvd",
         "id": 11
-      }
-    },
-    {
-      "name": "Stuffed Peppers",
-      "courseId": 2,
-      "summary": "Sizzling peppers that are sure to bring out hot topics",
-      "ingredients": "4 large red, orange or yellow bell peppers 2 tablespoons olive oil 1 cup finely chopped fennel bulb (about ½ a small bulb) or celery 1 cup finely chopped yellow onion (about 1 small) 3 garlic cloves, minced 1 teaspoon dried oregano ½ teaspoon red-pepper flakes 1 pound ground beef (at least 15 percent fat), turkey, chicken or pork ¾ cup dry white wine, chicken broth or vegetable broth 1 (14-ounce) can diced fire-roasted tomatoes 1½ teaspoons kosher salt, plus more to taste ½ teaspoon black pepper, plus more to taste 1 cup cooked white or brown rice ¼ cup grated Parmesan 2 tablespoons minced fresh parsley, plus more for serving (optional) 1 cup shredded mozzarella, provolone or other semifirm cheese",
-      "instructions": "Step 2 In a large (12-inch) skillet, heat the olive oil over medium. Add the fennel and onions and cook, stirring occasionally, until tender, 6 to 8 minutes. Stir in the garlic, oregano and red-pepper flakes, and cook until the garlic is fragrant, about 1 minute. Add the beef and cook, breaking up the meat with a wooden spoon, for 3 to 5 minutes, until no longer pink.  Step 3 Add ½ cup wine, increase the heat to medium-high and cook, scraping the bottom of the pan, until the liquid in the pan is reduced by about half.  Step 4 Add the tomatoes and their juices, salt and pepper, and bring to a boil. Remove from the heat and stir in the rice, Parmesan and parsley, if using. Taste and adjust seasonings.  Step 5 Divide the mixture among the peppers. Pour the remaining ¼ cup wine into the bottom of the dish, wrap tightly with foil and bake for 35 to 40 minutes, until a paring knife easily pierces the peppers. Remove the foil and spoon any juices that have accumulated in the bottom of the pan onto the peppers. Sprinkle the mozzarella evenly onto the peppers and bake another 10 to 15 minutes, until the mozzarella is melted and beginning to brown.  Step 6 Allow the peppers to cool for 5 minutes, sprinkle with parsley, if using, and serve hot.",
-      "userId": 9,
-      "approved": true,
-      "id": 15,
-      "course": {
-        "id": 2,
-        "mealType": "Entrees"
       }
     }
   ],

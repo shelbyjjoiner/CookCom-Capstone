@@ -3,8 +3,6 @@
 
 import { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { EditRecipe } from "./editRecipes";
-
 export const Profile = () => {
     //provide state variables 
     const [profile, updateProfile] = useState({

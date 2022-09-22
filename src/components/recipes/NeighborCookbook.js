@@ -56,7 +56,7 @@ export const NeighborCookBook = () => {
 
             <h2> What Recipe Are You Looking For? </h2>
 
-            <article className="recipes">
+            <article className="courses">
                 {courses.map(
                     (course) => {
                         return (
@@ -74,7 +74,8 @@ export const NeighborCookBook = () => {
                         )
                     }
                 )}
-
+            </article>
+            <article>
                 {filteredRecipe.map(
                     (recipe) => {
                         return <form className="recipe">
@@ -95,7 +96,7 @@ export const NeighborCookBook = () => {
 
 
 
-            </article >
+            </article>
         </>
     )
 }

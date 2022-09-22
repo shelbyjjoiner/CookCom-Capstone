@@ -1,4 +1,4 @@
-.recipes {
+.courses {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -13,7 +13,7 @@
 }
 
 .full_recipe {
-    background-color: darkolivegreen;
+    background-color: olivedrab;
     border: 1px dotted cornflowerblue;
     padding: 0.7rem;
     margin: 0.5rem 0;
@@ -39,6 +39,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    max-height: 50px;
 }
 
 .button-74:hover {

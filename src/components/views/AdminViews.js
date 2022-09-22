@@ -3,9 +3,10 @@
 //do necessary imports
 import { Outlet, Route, Routes } from "react-router-dom"
 import { AboutPage } from "../about/aboutPage"
+import { AdminViewNeighbors } from "../admins/AdminViewNeighbors"
 import { RecipeViews } from "../admins/RecipeViews"
-import { NeighborsList } from "../chefs/NeighborsList"
 import { NeighborProfile } from "../profiles/NeighborProfile"
+import { FullRecipe } from "../recipes/fullRecipe"
 import { NeighborCookBook } from "../recipes/NeighborCookbook"
 
 export const AdminViews = () => {
@@ -20,8 +21,9 @@ export const AdminViews = () => {
                 </>
             }>
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/neighbors" element={<NeighborsList />} />
+                <Route path="/neighbors" element={<AdminViewNeighbors />} />
                 <Route path="/cookbook" element={<NeighborCookBook />} />
+                <Route path="/cookbook/fullrecipe/:recipeId" element={<FullRecipe />} />
                 <Route path="/view" element={<RecipeViews />} />
                 <Route path="/neighborprofile/:userId" element={<NeighborProfile />} />
 

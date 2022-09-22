@@ -1,8 +1,10 @@
+//this module has the responsibility of displaying the neighborlist module w the exception of showing the delete button
 
-import { useDebugValue, useEffect, useState } from "react";
-import { Neighbors } from "./Neighbors";
+import { useEffect, useState } from "react"
+import { NeighborDelete } from "./NeighborDelete"
 
-export const NeighborsList = () => {
+
+export const AdminViewNeighbors = () => {
     //set up state variables 
     const [neighbors, setNeighbors] = useState([])
     const [admins, setAdmins] = useState([])
@@ -27,7 +29,7 @@ export const NeighborsList = () => {
         <article className="chefs">
             {
 
-                neighbors.map(neighbor => <Neighbors key={`neighbor--${neighbor.id}`}
+                neighbors.map(neighbor => <NeighborDelete key={`neighbor--${neighbor.id}`}
                     id={neighbor.id}
                     name={neighbor.name} />)
 
