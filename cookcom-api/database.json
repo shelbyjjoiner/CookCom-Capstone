@@ -26,14 +26,14 @@
       "name": "Monika Kilmaster",
       "email": "mkilmaster3@about.me",
       "address": "54 Dunning Junction",
-      "isAdmin": true
+      "isAdmin": false
     },
     {
       "id": 5,
       "name": "Giacinta Yankeev",
       "email": "gyankeev4@ft.com",
       "address": "1 Tennessee Trail",
-      "isAdmin": true
+      "isAdmin": false
     },
     {
       "id": 6,

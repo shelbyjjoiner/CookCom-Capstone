@@ -10,6 +10,9 @@ export const AdminNav = () => {
                 <Link className="navbar__link" to="/about">About Us</Link>
             </ol>
             <ol className="navbar__item active">
+                <Link className="navbar__link" to="/home">Home</Link>
+            </ol>
+            <ol className="navbar__item active">
                 <Link className="navbar__Link" to="/neighbors">Your Neighbors</Link>
             </ol>
             <ol className="navbar__item active">

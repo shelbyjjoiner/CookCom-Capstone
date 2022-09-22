@@ -4,6 +4,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { AboutPage } from "../about/aboutPage"
 import { NeighborsList } from "../chefs/NeighborsList"
+import { Homepage } from "../homepage/Homepage"
 import { EditRecipe } from "../profiles/editRecipes"
 import { NeighborProfile } from "../profiles/NeighborProfile"
 import { Profile } from "../profiles/ProfilePage"
@@ -14,14 +15,7 @@ import { RecipeForm } from "../recipes/RecipeForm"
 export const ChefViews = () => {
     return (
         <Routes>
-            <Route path="/" element={
-                <>
-                    <h1>Welcome to CookCom!</h1>
-                    <div>Your friendly neighborhood cooking community!</div>
-
-                    <Outlet />
-                </>
-            }>
+            <Route>
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/neighbors" element={<NeighborsList />} />
                 <Route path="/cookbook" element={<NeighborCookBook />} />
@@ -30,6 +24,7 @@ export const ChefViews = () => {
                 <Route path="/neighborprofile/:userId" element={<NeighborProfile />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/create" element={<RecipeForm />} />
+                <Route path="/home" elemenet={<Homepage />} />
             </Route>
         </Routes>
     )

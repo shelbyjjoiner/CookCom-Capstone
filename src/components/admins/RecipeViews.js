@@ -44,9 +44,9 @@ export const RecipeViews = () => {
         })
 
             .then(response => response.json())
-            .then(() => {
-                saveDeletedRecipe()
-            })
+            .then(navigate("/cookbook"))
+
+
     }
 
 

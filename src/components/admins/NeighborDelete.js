@@ -2,22 +2,11 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 
-//the responsibility of this module is to set up how the neighborslist will be displayed
+//the responsibility of this module is to set up how the neighborslist will be displayed w delete & chef of the week button
+//only permitted for admin use 
+
 export const NeighborDelete = ({ id, name }) => {
-    const [admins, setAdmins] = useState([])
 
-
-    //create useeffect that brings admins in 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/users?isAdmin=true`)
-                .then(response => response.json())
-                .then((adminArray) => {
-                    setAdmins(adminArray)
-                })
-        },
-        []
-    )
 
     ///create delete http request 
     const deleteUser = (id) => {
@@ -29,6 +18,18 @@ export const NeighborDelete = ({ id, name }) => {
 
             })
     }
+
+
+
+    //use fetch call to assign neighbor as fetch of the week ?
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/neighbors/`)
+                .then(response => response.json())
+                .then()
+        }
+    )
+
 
 
     return <section className="neighbor">
