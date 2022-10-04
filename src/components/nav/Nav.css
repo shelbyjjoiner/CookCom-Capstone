@@ -7,8 +7,32 @@
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    border: solid 2px rgb(35, 43, 30);
+}
+
+.navbar__item {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: rgb(105, 147, 209);
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(66, 65, 65);
 }
 
 .navbar__logout {
     margin-left: auto;
+}
+
+.navbar__item:hover {
+    background-color: #fbeee0;
+}
+
+.navbar__item:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.navbar__Link {
+    color: #422800;
 }

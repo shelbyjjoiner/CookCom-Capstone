@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
+import "./profile.css"
 
 export const EditRecipe = () => {
     const [recipe, update] = useState({
@@ -65,139 +65,140 @@ export const EditRecipe = () => {
 
 
     return <>
-        <form className="recipe" ></form>
-        <h2 className="recipeForm__Title"> Edit Recipe</h2>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="label">What Course Is Your Recipe?</label>
-                {
-                    recipeCourses.map(
-                        (course) => {
-                            if (recipe.courseId === course.id) {
+        <form className="editform" >
+            <h2 className="recipeForm__Title"> Edit Recipe</h2>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="label">What Course Is Your Recipe?</label>
+                    {
+                        recipeCourses.map(
+                            (course) => {
+                                if (recipe.courseId === course.id) {
 
 
-                                return <section className="typeOfCourse" key={`course--${course.id}`}>
+                                    return <section className="typeOfCourse" key={`course--${course.id}`}>
 
-                                    <input
-                                        onChange={
-                                            (evt) => {
-                                                const copy = { ...recipe }
-                                                copy.courseId = course.id
-                                                update(copy)
+                                        <input
+                                            onChange={
+                                                (evt) => {
+                                                    const copy = { ...recipe }
+                                                    copy.courseId = course.id
+                                                    update(copy)
 
-                                            }
-
-                                        }
-                                        type="radio" checked name="courses" value={`${course.id}`} /> {course.mealType}
-
-
-                                </section>
-                            }
-                            else {
-                                return <section className="typeOfCourse" key={`course--${course.id}`}>
-
-                                    <input
-                                        onChange={
-                                            (evt) => {
-                                                const copy = { ...recipe }
-                                                copy.courseId = course.id
-                                                update(copy)
+                                                }
 
                                             }
+                                            type="radio" checked name="courses" value={`${course.id}`} /> {course.mealType}
 
-                                        }
-                                        type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
 
-                                </section>
+                                    </section>
+                                }
+                                else {
+                                    return <section className="typeOfCourse" key={`course--${course.id}`}>
+
+                                        <input
+                                            onChange={
+                                                (evt) => {
+                                                    const copy = { ...recipe }
+                                                    copy.courseId = course.id
+                                                    update(copy)
+
+                                                }
+
+                                            }
+                                            type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
+
+                                    </section>
+                                }
                             }
-                        }
 
-                    )}
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="Name">Name of Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="What is the name of your recipe"
-                    value={recipe.name}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.name = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="summary">Summary of Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="Make it sweet, salty, or spicy"
-                    value={recipe.summary}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.summary = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="ingredients">Ingredients</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="List ingredients"
-                    value={recipe.ingredients}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.ingredients = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="label" >Instructions for Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="Instructions Here"
-                    value={recipe.instructions}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.instructions = evt.target.value
-                            update(copy)
+                        )}
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="Name"></label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="What is the name of your recipe"
+                        value={recipe.name}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.name = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="summary">Summary</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="Make it sweet, salty, or spicy"
+                        value={recipe.summary}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.summary = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="ingredients">Ingredients</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="List ingredients"
+                        value={recipe.ingredients}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.ingredients = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="label" >Instructions</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="Instructions Here"
+                        value={recipe.instructions}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.instructions = evt.target.value
+                                update(copy)
 
-                        }
-                    } />
-            </div>
-        </fieldset>
+                            }
+                        } />
+                </div>
+            </fieldset>
 
-        <button
-            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-            className="btn btn-primary">
-            Submit Revision
-        </button>
+            <button
+                onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                className="btn btn-primary">
+                Submit Revision
+            </button>
+        </form>
     </>
 
 }

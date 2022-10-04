@@ -22,22 +22,24 @@ export const FullRecipe = () => {
 
 
     return <>
-        <header> Learn How To Create {recipe.name}</header>
+        <form className="fullrecipe--header">
+            <header> Learn How To Create {recipe.name}</header>
+        </form>
         <form>
             <fieldset>
-                <div className="full_recipe" key={`recipe--${recipe.id}`}>
+                <div className="summary" key={`recipe--${recipe.id}`}>
                     <label htmlFor="summary"> Summary</label>
                     <div>{recipe.summary}</div>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="full_recipe" key={`recipe--${recipe.id}`}>
+                <div className="ingredients" key={`recipe--${recipe.id}`}>
                     <label htmlFor="ingredients">Ingredients</label>
                     <div>{recipe.ingredients}</div>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="full_recipe" key={`recipe--${recipe.id}`}>
+                <div className="instructions" key={`recipe--${recipe.id}`}>
                     <label htmlFor="instructions">Instructions</label>
                     <div>{recipe.instructions}</div>
                 </div>

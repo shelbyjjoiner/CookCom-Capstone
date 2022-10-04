@@ -24,7 +24,7 @@ export const ChefViews = () => {
                 <Route path="/neighborprofile/:userId" element={<NeighborProfile />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/create" element={<RecipeForm />} />
-                <Route path="/home" elemenet={<Homepage />} />
+                <Route path="/home" element={<Homepage />} />
             </Route>
         </Routes>
     )

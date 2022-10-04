@@ -60,34 +60,38 @@ export const Profile = () => {
 
     return (
         <>
-            <header>Your Profile</header>
             <form className="profile" >
-                <div> {profile?.user?.name} </div>
-                <div>{profile?.user?.address} </div>
+                <div> Hello, {profile?.user?.name}! </div>
             </form>
             <fieldset>
-                <form className="recipe">
-                    <label htmlFor="recipe">Your Recipes</label>
+                <form className="user-recipe">
+                    <div>Your Recipes</div>
                     {
                         recipe.map(
                             (recipe) => {
                                 return <section className="list_recipes" key={`recipe--${recipe.id}`}>
                                     <header>{recipe.name}</header>
-                                    {recipe.summary}
-                                    <button onClick={() => {
+                                    <header>{recipe.summary}</header>
+                                    <footer><button className="button-23" role="button" onClick={() => {
                                         navigate(`/profile/edit_recipe/${recipe.id}`)
                                     }}
                                     >Edit</button>
-                                    <button onClick={(clickEvent) => {
-                                        deletedRecipe(recipe)
-                                    }}
-                                    >Delete</button>
+                                        <button className="button-23" role="button" onClick={(clickEvent) => {
+                                            deletedRecipe(recipe)
+                                        }}
+                                        >Delete</button>
+                                    </footer>
                                 </section>
                             }
                         )
                     }
 
 
+                </form>
+            </fieldset>
+            <fieldset>
+                <form className="address">
+                    <footer> You are creating masterpieces at {profile.address} </footer>
                 </form>
             </fieldset>
         </>

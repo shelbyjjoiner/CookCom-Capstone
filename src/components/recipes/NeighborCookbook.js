@@ -53,15 +53,15 @@ export const NeighborCookBook = () => {
     //jsx jsx jsx jsx jsx
     return (
         <>
-
-            <h2> What Recipe Are You Looking For? </h2>
-
+            <form className="cookbook--header">
+                <div> What Recipe Are You Looking For? </div>
+            </form>
             <article className="courses">
                 {courses.map(
                     (course) => {
                         return (
                             <>
-                                <button class="button-74" role="button" value={course.id}
+                                <button className="button-74" role="button" value={course.id}
                                     onClick={() => {
                                         setSelectedCourse(course.id)
                                     }}
@@ -78,13 +78,15 @@ export const NeighborCookBook = () => {
             <article>
                 {filteredRecipe.map(
                     (recipe) => {
-                        return <form className="recipe">
-                            <header>{recipe.name}</header>
-                            {recipe.summary}
-                            <Link to={`/cookbook/fullrecipe/${recipe.id}`}><button
+                        return <form className="recipe--container">
+                            <form className="recipe">
+                                <header>{recipe.name}</header>
+                                <header>{recipe.summary}</header>
+                                <Link to={`/cookbook/fullrecipe/${recipe.id}`}><button className="button-23" role="button"
 
-                            >Full Recipe</button></Link>
 
+                                >Full Recipe</button></Link>
+                            </form>
                         </form>
 
 

@@ -1,0 +1,42 @@
+@import url("https://fonts.google.com/specimen/Passions+Conflict?preview.text=Welcome%20to%20CookCom&preview.text_type=custom");
+
+
+.chefoftheweek {
+    background-color: rgb(89, 106, 53);
+    border: 3px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    justify-content: space-evenly;
+}
+
+.chefcontainer {
+    background-color: rgb(243, 237, 204);
+    border: 1px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0
+}
+
+.homepage {
+    background-color: rgb(224, 177, 102);
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(35, 43, 30);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Passions Conflict';
+}
+
+.tips {
+    background-color: rgb(89, 106, 53);
+    border: 3px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    justify-content: space-evenly;
+}
+
+.tipoftheweek {
+    background-color: rgb(243, 237, 204);
+    border: 1px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0
+}

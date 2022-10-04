@@ -7,7 +7,10 @@ export const ChefNav = () => {
     return (
         <ul className="navbar">
             <ol className="navbar__item active">
-                <Link className="navbar__link" to="/about">About Us</Link>
+                <Link className="navbar__Link" to="/about">About Us</Link>
+            </ol>
+            <ol className="navbar__item active">
+                <Link className="navbar__Link" to="/home">Home</Link>
             </ol>
             <ol className="navbar__item active">
                 <Link className="navbar__Link" to="/neighbors">Your Neighbors</Link>

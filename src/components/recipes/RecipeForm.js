@@ -76,120 +76,121 @@ export const RecipeForm = () => {
     }
 
     return <>
-        <form className="recipe" ></form>
-        <h2 className="recipeForm__Title"> New Recipe</h2>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="label">What Course Is Your Recipe?</label>
-                {
-                    recipeCourses.map(
-                        (course) => {
-                            return <section className="typeOfCourse" key={`course--${course.id}`}>
+        <form className="recipeform" >
+            <h2 className="recipeForm__Title"> New Recipe</h2>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="label">What Course Is Your Recipe?</label>
+                    {
+                        recipeCourses.map(
+                            (course) => {
+                                return <section className="typeOfCourse" key={`course--${course.id}`}>
 
-                                <input
-                                    onChange={
-                                        (evt) => {
-                                            const copy = { ...recipe }
-                                            copy.courseId = course.id
-                                            update(copy)
+                                    <input
+                                        onChange={
+                                            (evt) => {
+                                                const copy = { ...recipe }
+                                                copy.courseId = course.id
+                                                update(copy)
+
+                                            }
 
                                         }
-
-                                    }
-                                    type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
+                                        type="radio" name="courses" value={`${course.id}`} /> {course.mealType}
 
 
 
 
 
-                            </section>
-                        }
+                                </section>
+                            }
 
-                    )}
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="Name">Name of Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="What is the name of your recipe"
-                    value={recipe.name}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.name = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="summary">Summary of Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="Make it sweet, salty, or spicy"
-                    value={recipe.summary}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.summary = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group" key={`recipe--${recipe.id}`}>
-                <label htmlFor="ingredients">Ingredients</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="List ingredients"
-                    value={recipe.ingredients}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.ingredients = evt.target.value
-                            update(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="label" >Instructions for Recipe</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    placeholder="Instructions Here"
-                    value={recipe.instructions}
-                    onChange={
-                        (evt) => {
-                            //copy existing state
-                            const copy = { ...recipe }
-                            copy.instructions = evt.target.value
-                            update(copy)
+                        )}
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="Name"></label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="What is the name of your recipe"
+                        value={recipe.name}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.name = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="summary">Summary</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="Make it sweet, salty, or spicy"
+                        value={recipe.summary}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.summary = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group" key={`recipe--${recipe.id}`}>
+                    <label htmlFor="ingredients">Ingredients</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="What's inside?"
+                        value={recipe.ingredients}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.ingredients = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="label" >Instructions</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="How are you going to make it?"
+                        value={recipe.instructions}
+                        onChange={
+                            (evt) => {
+                                //copy existing state
+                                const copy = { ...recipe }
+                                copy.instructions = evt.target.value
+                                update(copy)
 
-                        }
-                    } />
-            </div>
-        </fieldset>
+                            }
+                        } />
+                </div>
+            </fieldset>
 
-        <button
-            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-            className="btn btn-primary">
-            Submit Recipe
-        </button>
+            <button
+                onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                className="btn btn-primary">
+                Submit Recipe
+            </button>
+        </form>
     </>
 }

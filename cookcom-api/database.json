@@ -43,13 +43,6 @@
       "isAdmin": false
     },
     {
-      "id": 7,
-      "name": "Fanchon Cholerton",
-      "email": "fcholerton6@printfriendly.com",
-      "address": "54 Eagan Street",
-      "isAdmin": false
-    },
-    {
       "id": 8,
       "name": "Ervin Cram",
       "email": "ecram7@disqus.com",
@@ -80,6 +73,13 @@
       "isChefOfTheWeek": false
     },
     {
+      "id": 4,
+      "userId": 4,
+      "address": "54 Dunning Junction",
+      "favoriteRecipeId": 4,
+      "isChefOfTheWeek": false
+    },
+    {
       "id": 3,
       "userId": 6,
       "address": "15 Manufacturers Drive",
@@ -87,32 +87,24 @@
       "isChefOfTheWeek": true
     },
     {
-      "id": 4,
-      "userId": 7,
-      "address": "54 Eagan Street",
-      "favoriteRecipeId": 4,
-      "isChefOfTheWeek": false
-    },
-    {
       "address": "6870 Treasure Blvd",
       "favoriteRecipeId": 7,
       "isChefOfTheWeek": false,
       "userId": 11,
       "id": 6
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "address": "1 Tennessee Trail",
+      "isChefOfTheWeek": false,
+      "favoriteRecipeId": 8
     }
   ],
   "admins": [
     {
       "id": 1,
       "userId": 2
-    },
-    {
-      "id": 2,
-      "userId": 4
-    },
-    {
-      "id": 3,
-      "userId": 5
     },
     {
       "id": 4,
@@ -144,9 +136,9 @@
     {
       "name": "Cream of Mushroom ",
       "courseId": 4,
-      "summary": " lets get stuffed w shroomies! ",
-      "ingredients": "mushroom, cream, etc.",
-      "instructions": "put in pot, boil, serve ",
+      "summary": "What do they call the shroom when he walks in? A fungi! ",
+      "ingredients": "90g butter 2 medium onions, roughly chopped 1 garlic clove, crushed 500g mushrooms, finely chopped (chestnut or button mushrooms work well) 2 tbsp plain flour 1, hot chicken stock 1 bay leaf 4 tbsp single cream small handful flat-leaf parsley, roughly chopped, to serve (optional)",
+      "instructions": "STEP 1 Heat the butter in a large saucepan and cook the onions and garlic until soft but not browned, about 8-10 mins.  STEP 2 Add the mushrooms and cook over a high heat for another 3 mins until softened. Sprinkle over the flour and stir to combine. Pour in the chicken stock, bring the mixture to the boil, then add the bay leaf and simmer for another 10 mins.  STEP 3 Remove and discard the bay leaf, then remove the mushroom mixture from the heat and blitz using a hand blender until smooth. Gently reheat the soup and stir through the cream (or, you could freeze the soup at this stage – simply stir through the cream when heating). Scatter over the parsley, if you like, and serve.",
       "userId": 1,
       "approved": true,
       "id": 3,
@@ -165,15 +157,22 @@
     {
       "name": "Caesar Salad",
       "courseId": 5,
-      "summary": "lets kill em again",
-      "ingredients": "lettuce, chicken, shallots, etc ",
-      "instructions": "chop up and put in bowl ",
+      "summary": "Salad so good they had to kill Caesar twice",
+      "ingredients": "DRESSING: 6  anchovy fillets packed in oil, drained 1  small garlic clove Kosher salt 2  large egg yolks 2  tablespoons fresh lemon juice, plus more ¾  teaspoon Dijon mustard 2  tablespoons olive oil ½  cup vegetable oil 3  tablespoons finely grated Parmesan Freshly ground black pepper CROUTONS: 3  cups torn 1\" pieces country bread, with crusts 3  tablespoons olive oil ASSEMBLY: 3  romaine hearts, leaves separated Parmesan, for serving",
+      "instructions": "DRESSING: Step 1 Chop together anchovy fillets, garlic, and pinch of salt. Use the side of a knife blade to mash into a paste, then scrape into a medium bowl. Whisk in egg yolks, 2 Tbsp. lemon juice, and mustard. Adding drop by drop to start, gradually whisk in olive oil, then vegetable oil; whisk until dressing is thick and glossy. Whisk in Parmesan. Season with salt, pepper, and more lemon juice, if desired.  DO AHEAD: Can be made 1 day ahead.  CROUTONS: Step 2 Preheat oven to 375°. Toss bread with olive oil on a baking sheet; season with salt and pepper. Bake, tossing occasionally, until golden, 10–15 minutes.  ASSEMBLY: Step 3 Place whole romaine leaves (for the ideal mix of crispness, surface area, and structure) in a large bowl. Use a vegetable peeler to thinly shave a modest amount of Parmesan (a mound of grated Parmesan may look impressive, but all that clumpy cheese mutes the dressing). Use your hands to gently toss together the lettuce, croutons, and dressing. Top with the shaved Parm.",
       "userId": 1,
       "approved": true,
       "id": 4,
       "course": {
         "id": 5,
         "mealType": "Salads"
+      },
+      "user": {
+        "id": 1,
+        "name": "Darnall Vernay",
+        "email": "dvernay0@nih.gov",
+        "address": "707 Quincy Trail",
+        "isAdmin": false
       }
     },
     {
@@ -230,6 +229,13 @@
       "course": {
         "id": 3,
         "mealType": "Desserts"
+      },
+      "user": {
+        "id": 1,
+        "name": "Darnall Vernay",
+        "email": "dvernay0@nih.gov",
+        "address": "707 Quincy Trail",
+        "isAdmin": false
       }
     },
     {
@@ -244,6 +250,13 @@
       "course": {
         "id": 6,
         "mealType": "Cocktails"
+      },
+      "user": {
+        "id": 6,
+        "name": "Lil Cranston",
+        "email": "lcranston5@toplist.cz",
+        "address": "15 Manufacturers Drive",
+        "isAdmin": false
       }
     },
     {
@@ -258,6 +271,13 @@
       "course": {
         "id": 4,
         "mealType": "Soups"
+      },
+      "user": {
+        "id": 6,
+        "name": "Lil Cranston",
+        "email": "lcranston5@toplist.cz",
+        "address": "15 Manufacturers Drive",
+        "isAdmin": false
       }
     },
     {
@@ -279,6 +299,125 @@
         "isAdmin": false,
         "address": "6870 Treasure Blvd",
         "id": 11
+      }
+    },
+    {
+      "name": "Southwest Eggrolls",
+      "courseId": 1,
+      "summary": "Get a tease of midwestern flavor with some styled eggrolls",
+      "ingredients": "2 tablespoons vegetable oil, divided  1 skinless, boneless chicken breast half  2 tablespoons minced green onion  2 tablespoons minced red bell pepper  ⅓ cup frozen corn kernels  ¼ cup black beans, rinsed and drained  2 tablespoons frozen chopped spinach, thawed and drained  2 tablespoons diced jalapeno peppers  ½ tablespoon minced fresh parsley  ½ teaspoon ground cumin  ½ teaspoon chili powder  ⅓ teaspoon salt  1 pinch ground cayenne pepper  ¾ cup shredded Monterey Jack cheese  5 (6 inch) flour tortillas  1 quart oil for deep frying",
+      "instructions": "Rub 1 tablespoon vegetable oil over chicken breast. Cook chicken in a medium saucepan over medium heat until meat is no longer pink and juices run clear, about 5 minutes per side. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C). Remove from heat and set aside.  Step 2 Heat remaining 1 tablespoon vegetable oil in the saucepan over medium heat. Stir in green onion and bell pepper. Cook and stir until tender, about 5 minutes.  Step 3 Dice chicken and mix into the pan with green onion and bell pepper. Mix in corn, black beans, spinach, jalapeño peppers, parsley, cumin, chili powder, salt, and cayenne pepper. Cook and stir until well blended and tender, 5 minutes. Remove from heat and stir in Monterey Jack cheese so that it melts.  Step 4 Wrap tortillas with a clean, lightly moist cloth. Microwave on high until hot and pliable, about 1 minute.  Step 5 Spoon even amounts of the mixture into each tortilla. Fold ends of tortillas, then roll tightly around the mixture. Secure with toothpicks. Arrange in a medium dish, cover with plastic, and place in the freezer. Freeze for at least 4 hours.  Step 6 Heat oil in a large, deep skillet for deep-frying to 375 degrees F (190 degrees C). Deep-fry frozen, stuffed tortillas until dark golden brown, about 10 minutes each. Drain on paper towels before serving.",
+      "userId": 3,
+      "approved": true,
+      "id": 14,
+      "course": {
+        "id": 1,
+        "mealType": "Appetizers"
+      },
+      "user": {
+        "id": 3,
+        "name": "Ahmed Accombe",
+        "email": "aaccombe2@paginegialle.it",
+        "address": "7383 Debra Junction",
+        "isAdmin": false
+      }
+    },
+    {
+      "name": "Cobby Salad",
+      "courseId": 5,
+      "summary": "A salad filled with almost everything you shouldn't have",
+      "ingredients": "1/3 c. red wine vinegar 1 tbsp. Dijon mustard 2/3 c. extra-virgin olive oil Kosher salt Freshly ground black pepper 1 head romaine lettuce, coarsely chopped 4 hard-boiled eggs, peeled and quartered 12 oz. cooked chicken, diced 8 slices bacon, cooked and crumbled 1 avocado, thinly sliced 4 oz. crumbled blue cheese 5 oz. cherry tomatoes, halved 2 tbsp. finely chopped chives",
+      "instructions": "In a jar, shake together vinegar, mustard, and oil and season with salt and pepper. On a large platter, spread out lettuce, then add rows of hard-boiled egg, chicken, bacon, avocado, blue cheese, and cherry tomatoes. Season with salt and pepper, drizzle with dressing, and garnish with chives.",
+      "userId": 3,
+      "approved": true,
+      "id": 15,
+      "course": {
+        "id": 5,
+        "mealType": "Salads"
+      }
+    },
+    {
+      "name": "Lobster Pasta ",
+      "courseId": 2,
+      "summary": "Livin' Like Larry inside pasta ",
+      "ingredients": "Kosher salt 2  1½-lb. live lobsters 1  medium onion, coarsely chopped 2  celery stalks, trimmed, coarsely chopped 3  garlic cloves, peeled, smashed 2  sprigs basil or tarragon 4  cups heavy cream ½  tsp. crushed red pepper flakes 1  lb. bucatini or spaghetti 1  Tbsp. unsalted butter 3  oz. Parmesan, finely grated (about 1 cup), plus more for serving 3  Tbsp. chopped chives Freshly ground black pepper",
+      "instructions": "Step 1 Fill a large pot with a tight-fitting lid with 2\" of cold water. Generously season with salt and bring to a boil. Add lobsters to pot, cover, and steam until shells are bright red, about 8 minutes. (Better to slightly undercook the lobsters since you will be reheating the meat before serving.) Transfer lobsters to a large rimmed baking sheet and let sit until cool enough to handle.  Step 2 Break down those lobsters! (Never picked lobster meat before? That’s what YouTube is for!) Cut or tear off small legs and eat them (they make for a great snack). Remove tail meat, cut tail meat in half lengthwise, and cut each half into bite-size pieces; transfer to a medium bowl. Remove meat from knuckles and claws, doing your best to keep the meat as intact as possible (it’s nice to have a whole claw for each person); add knuckle and claw meat to bowl with tail meat and chill until ready to serve.  Step 3 With a sturdy knife, hack carapace and shells into 1\" pieces and transfer to a large Dutch oven or pot. Add onion, celery, garlic, basil, cream, and red pepper flakes. Bring to a boil, then reduce heat to medium and simmer, uncovered and stirring occasionally, until cream is reduced by half, about 45 minutes.  Step 4 Strain lobster cream through a fine-mesh sieve into a medium bowl, pressing on solids to get as much liquid out as possible; discard solids. (If cream isn’t reduced to about 2 cups, don’t sweat it—you can always reduce it a bit more before adding the pasta.)  Step 5 Cook pasta in a large pot of boiling salted water, stirring occasionally, until al dente. (You don’t want it to be too al dente, as it’s not going to spend that much time in the sauce.) Drain, reserving 1 cup of pasta cooking liquid.  Step 6 Meanwhile, return lobster cream to Dutch oven or a wide deep skillet. Heat over medium and bring to a simmer; taste and season with salt. Add reserved lobster meat and butter to cream sauce and stir to combine.  Step 7 Add pasta to Dutch oven and toss gently to combine (you don’t want to break up the lobster meat too much), adding 1 cup Parmesan a handful at a time until sauce is thick and cheese is incorporated. If sauce looks too thick, add a splash or two of reserved pasta cooking liquid to loosen it up. Remember: Cream sauces always thicken as they cool, so it’s best to err on the side of loose.  Step 8 Transfer lobster pasta to a platter. Top with chives and a few cranks of black pepper. Serve with more grated Parmesan alongside.  Step 9 Do Ahead: Lobster cream sauce can be made 24 hours ahead. Strain and transfer to a resealable container and chill. Gently rewarm sauce in a Dutch oven over medium-low heat. Lobster meat can be picked 24 hours ahead. Cover and chill.",
+      "userId": 4,
+      "approved": true,
+      "id": 16,
+      "course": {
+        "id": 2,
+        "mealType": "Entrees"
+      }
+    },
+    {
+      "name": "Molten Chocolate Lava Cake ",
+      "courseId": 3,
+      "summary": "Want something smooth and easy that you will regret later? Try this fat kid snack! ",
+      "ingredients": "1 stick (4 ounces) unsalted butter  6 ounces bittersweet chocolate, preferably Valrhona  2 eggs  2 egg yolks  1/4 cup sugar  Pinch of salt  2 tablespoons all-purpose flour",
+      "instructions": "Preheat the oven to 450°. Butter and lightly flour four 6-ounce ramekins. Tap out the excess flour. Set the ramekins on a baking sheet.  In a double boiler, over simmering water, melt the butter with the chocolate. In a medium bowl, beat the eggs with the egg yolks, sugar and salt at high speed until thickened and pale.  Whisk the chocolate until smooth. Quickly fold it into the egg mixture along with the flour. Spoon the batter into the prepared ramekins and bake for 12 minutes, or until the sides of the cakes are firm but the centers are soft. Let the cakes cool in the ramekins for 1 minute, then cover each with an inverted dessert plate. Carefully turn each one over, let stand for 10 seconds and then unmold. Serve immediately.",
+      "userId": 5,
+      "approved": true,
+      "id": 17,
+      "user": {
+        "id": 5,
+        "name": "Giacinta Yankeev",
+        "email": "gyankeev4@ft.com",
+        "address": "1 Tennessee Trail",
+        "isAdmin": false
+      },
+      "course": {
+        "id": 3,
+        "mealType": "Desserts"
+      }
+    },
+    {
+      "name": "Pumpkin Spice White Russian Cocktail",
+      "courseId": 6,
+      "summary": "This festive fall cocktail brings the perfect pumpkin flavor to a classic White Russian with the addition of pumpkin spice creamer. It’s so creamy, dreamy, and delicious! ",
+      "ingredients": "For the Drink: 3 ounces 2 shot glasses, good quality vodka 3 ounces, 2 shot glasses pumpkin spice creamer 1.5 ounces, 1 shot glass Kahlua, Whipped Cream and pumpkin pie spice for garnish. For the Rim: 1 teaspoon pumpkin pie spice, 1 teaspoon sugar or sparkling sugar, 3 tablespoons crushed graham crackers",
+      "instructions": "Mix the ingredients for the rim together on a shallow plate. Dip the edge of two glasses in water and then dip into the graham mixture. Press to coat. Set the two glasses aside. Pour vodka, creamer, and kahlua into a large cocktail shaker filled with ice. Shake lightly until combined and cold. Pour into glasses and top with whipped cream and pumpkin pie spice.",
+      "userId": 4,
+      "approved": true,
+      "id": 18,
+      "course": {
+        "id": 6,
+        "mealType": "Cocktails"
+      }
+    },
+    {
+      "name": "Calamari",
+      "courseId": 1,
+      "summary": "Is it an octopus or is it a squid?",
+      "ingredients": "1 pound frozen calamari tubes thawed, Kosher salt, ½ cup 2% milk, 1 ½ cup all purpose flour , ⅓ cup cornstarch, ½ teaspoon baking powder, ¾ teaspoon dry oregano, ½ teaspoon black pepper, ½ teaspoon cayenne pepper, Grape seed oil as needed, 1 lemon cut into wedges to serve",
+      "instructions": "Slice the calamari tubes into ¾-inch thick rings. In a medium bowl, stir 1 teaspoon Diamond Crystal kosher salt in ½ cup milk. Add the calamari rings to the milk mixture and refrigerate for 30 minutes. In a large bowl, whisk together the flour, cornstarch, baking powder, oregano, black pepper, and cayenne (make sure the mixture is well combined). Prepare a large colander and set it on top of a large bowl. Using a pair of tongs, take a portion of the calamari rings (about ½ of them) shake off excess milk and toss the calamari in the flour mixture. Toss the calamari to coat evenly. Put the coated calamari in the colander. Repeat with the rest of the calamari. Turn your oven on a low 150 degrees F. Prepare a large sheet pan and set a wire rack on top. Top the wire rack with paper towel. Heat 4 inches of grape seed oil in a small cooking pot (I used a 2.5 quart pot) to somewhere between 350 and 365 degrees F. To test your oil, drop one calamari ring, many bubbles will form around it and the calamari will begin to float. Once your oil is ready, using a pair of tongs, gently add some of the calamari in and fry for about 3 minutes or until golden brown. Remove the calamari from the oil and arrange it on the paper towel on top of your prepared wire rack. Immediately season with kosher salt, then transfer to your warm oven to keep warm while you work on the rest. Repeat until you have fried all the calamari. Transfer the fried calamari to a serving plate and finish with a squeeze of lemon juice!",
+      "userId": 5,
+      "approved": true,
+      "id": 19,
+      "course": {
+        "id": 1,
+        "mealType": "Appetizers"
+      }
+    },
+    {
+      "name": "Tomato Bisque",
+      "courseId": 4,
+      "summary": "Made with roasted garlic, this creamy, blended to silky perfection, soup is always a huge hit!",
+      "ingredients": "2 tablespoon olive oil, 1 medium onion diced, 1 medium carrot sliced, 1 stalk celery sliced, 1 tablespoon roasted garlic,  2 tablespoon all-purpose flour all-purpose, 4 cups chicken broth low sodium, 28 ounce diced tomatoes 1 can, 2 bay leaves, 1 cup heavy cream, ½ teaspoon salt or to taste, ¼ teaspoon pepper freshly ground, 1 tablespoon parsley chopped for garnish, or fresh basil",
+      "instructions": "Sauté: Heat the olive oil in a pot over medium-high heat. Add the onion, carrot, and celery. Cook for 5-6 minutes, stirring often, until the onion is softened and translucent. Add the roasted garlic and cook for another 30 seconds. Simmer: Stir in the flour and cook for another 1-2 minutes, then add the chicken broth, tomatoes, and bay leaves. Stir to combine, then bring the soup to a boil. Reduce the heat to a simmer, cover with a lid, and cook for 30 minutes, stirring occasionally. Blend: Remove the bay leaves from the pot. Use an immersion blender and blend the soup until it's completely smooth. If you don't have an immersion blender, you can transfer the soup to a regular blender. Finish: Stir 3/4 cup of the cream into the pot. Season to taste with salt and pepper. Garnish each bowl with a drizzle of the remaining heavy cream, the fresh basil, and a crack of pepper.",
+      "userId": 4,
+      "approved": true,
+      "id": 20,
+      "user": {
+        "id": 4,
+        "name": "Monika Kilmaster",
+        "email": "mkilmaster3@about.me",
+        "address": "54 Dunning Junction",
+        "isAdmin": false
+      },
+      "course": {
+        "id": 4,
+        "mealType": "Soups"
       }
     }
   ],

@@ -1,13 +1,31 @@
 .about {
-    background-color: olivedrab;
-    border: 1px dotted rgb(12, 143, 199);
+    background-color: rgb(89, 106, 53);
+    border: 2px solid rgb(35, 43, 30);
     padding: 0.7rem;
     margin: 0.5rem 0;
 }
 
 .bio {
-    background-color: rgb(234, 223, 163);
-    border: 1px dotted cornflowerblue;
+    background-color: rgb(243, 237, 204);
+    border: 1px solid rgb(35, 43, 30);
     padding: 0.7rem;
     margin: 0.5rem 0
+}
+
+.guidelines {
+    background-color: rgb(89, 106, 53);
+    border: 2px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+
+.entry {
+    background-color: rgb(243, 237, 204);
+    border: 1px solid rgb(35, 43, 30);
+    padding: 0.7rem;
+    margin: 0.5rem 0
+}
+
+header {
+    text-align: center;
 }

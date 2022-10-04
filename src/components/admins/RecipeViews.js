@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./admin.css"
+
 
 export const RecipeViews = () => {
 
     const [recipes, updateRecipe] = useState([])
-    const [neighbors, updateNeighbor] = useState([])
-    const [admins, updateAdmins] = useState([])
     const navigate = useNavigate()
     //go thru recipe and display only approved recipes 
     useEffect(
@@ -80,7 +80,3 @@ export const RecipeViews = () => {
 
 }
 
-
-
-//display title 
-//buttons next to it

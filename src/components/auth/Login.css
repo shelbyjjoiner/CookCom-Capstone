@@ -11,13 +11,14 @@ fieldset {
 }
 
 .form--login {
-    display: inline-block;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .form--login>fieldset>input[type="email"] {
     width: 25em;
+    margin: auto;
+    text-align: center;
 }
 
 .label--login {
@@ -26,7 +27,6 @@ fieldset {
 }
 
 .form-control {
-    display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
@@ -47,8 +47,9 @@ fieldset {
 }
 
 .form--login {
-    background-position-x: right;
+    background-position-x: center;
     z-index: 1;
+    margin: 0 auto;
     min-height: 25rem;
     min-width: 45rem;
     background-color: hsla(0, 0%, 100%, 0.40);
@@ -59,4 +60,23 @@ fieldset {
 .button--close {
     position: relative;
     bottom: -2rem;
+}
+
+.welcome {
+    background: url(https://wallpaper.dog/large/20507895.jpg);
+    background-position: center;
+    margin: auto;
+}
+
+.link--register {
+    background-color: rgb(224, 177, 102);
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(228, 232, 226);
+    padding: 10px;
+    text-align: center;
+}
+
+Link {
+    color: #422800
 }

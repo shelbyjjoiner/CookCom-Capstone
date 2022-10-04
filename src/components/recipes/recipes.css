@@ -4,19 +4,34 @@
     justify-content: space-evenly;
 }
 
-.recipe {
-    background-color: olivedrab;
-    border: 1px dotted rgb(12, 143, 199);
+.recipe--container {
+    background-color: rgb(89, 106, 53);
+    border: 1px solid;
     padding: 0.7rem;
     margin: 0.5rem 0;
     justify-content: space-evenly;
 }
 
+.recipe {
+
+    background-color: rgb(243, 237, 204);
+    border: 1px solid gray;
+    padding: 0.7rem;
+    margin: 0.5rem 0
+}
+
 .full_recipe {
-    background-color: olivedrab;
-    border: 1px dotted cornflowerblue;
+    background-color: rgb(89, 106, 53);
+    border: 1px solid gray;
     padding: 0.7rem;
     margin: 0.5rem 0;
+}
+
+.recipeform {
+    background-color: rgb(243, 237, 204);
+    border: 1px solid grayß;
+    padding: 0.7rem;
+    margin: 0.5rem 0
 }
 
 
@@ -29,10 +44,9 @@
     box-shadow: #422800 4px 4px 0 0;
     color: #422800;
     cursor: pointer;
-    display: inline-block;
     font-weight: 600;
-    font-size: 0.7rem;
-    padding: 0.7rem;
+    font-size: 0.9rem;
+    padding: 1.5rem;
     line-height: 0.7rem;
     text-align: center;
     text-decoration: none;
@@ -49,4 +63,46 @@
 .button-74:active {
     box-shadow: #422800 2px 2px 0 0;
     transform: translate(2px, 2px);
+}
+
+.cookbook--header {
+    text-align: center;
+    background-color: rgb(224, 177, 102);
+    padding: 0.3rem;
+    margin: 0.8rem;
+    border: 2px solid;
+}
+
+
+.fullrecipe--header {
+    margin: 2rem;
+    padding: 0.7rem;
+    background-color: rgb(188, 88, 45);
+    border: 2px solid;
+}
+
+
+
+.summary {
+    text-align: center;
+    background-color: rgb(205, 164, 62);
+    padding: 0.5rem;
+    margin: 0.9rem;
+    border: 2px solid;
+}
+
+.ingredients {
+    text-align: center;
+    background-color: rgb(205, 164, 62);
+    padding: 0.5rem;
+    margin: 0.9rem;
+    border: 2px solid;
+}
+
+.instructions {
+    text-align: center;
+    background-color: rgb(205, 164, 62);
+    padding: 0.5rem;
+    margin: 0.9;
+    border: 2px solid;
 }

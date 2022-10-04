@@ -2,7 +2,8 @@
 // on link in neighborlist
 
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import "./profile.css"
 
 //should contain their name, address, and their approved recipes 
 
@@ -39,23 +40,32 @@ export const NeighborProfile = () => {
     return <>
         <form className="neighbor_profile" >
             <header>Welcome to {neighbor?.user?.name}'s Page! </header>
-            <div>{neighbor.address} </div>
+
         </form>
         <fieldset>
-            <form className="recipe">
+            <form className="neighbor--recipe">
                 <label htmlFor="recipe">Neighbor Recipes</label>
                 {
                     recipe.map(
                         (recipe) => {
                             return <section className="list_recipes" key={`recipe--${recipe.id}`}>
-                                <header> {recipe.name}</header>
-                                {recipe.summary}
+                                <header>{recipe.name}</header>
+                                <header>{recipe.summary}</header>
+                                <header><Link to={`/cookbook/fullrecipe/${recipe.id}`}><button className="button-23" role="button"
+
+                                >Full Recipe</button></Link>
+                                </header>
                             </section>
                         }
                     )
                 }
 
 
+            </form>
+        </fieldset>
+        <fieldset>
+            <form className="address">
+                <footer>If you have any questions, please stop by at {neighbor.address}!</footer>
             </form>
         </fieldset>
     </>
